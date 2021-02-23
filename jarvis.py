@@ -57,7 +57,7 @@ if __name__ == "__main__":
 
         # Logic for executing tasks based on query
 
-        if 'wikipedia' in query:
+        if 'what is' or 'who is' in query:
             speak("Searching wikipedia")
             query = query.replace("Wikipedia", "")
             results = wikipedia.summary(query, sentences=2)
@@ -88,7 +88,21 @@ if __name__ == "__main__":
             codePath = "C:\\Users\\vatsa\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
 
+        elif 'play music' in query:
+            webbrowser.open("https://music.youtube.com/watch?v=T94PHkuydcw&list=RDAMVMT94PHkuydcw")
+
+        elif 'open music' in query:
+            webbrowser.open("https://music.youtube.com/")
+
+        elif 'who are you' in query:
+            speak("I am Jarvis -version 1.1, your personal Assistant. How may I help you sir?")
+
+        elif 'how are you jarvis' in query:
+            speak("I am fine sir. How may I help you?")
+
+        # elif  in query:
+        #     webbrowser.open_new_tab("google.com")
+
         elif 'quit' in query:
             exit()
-
 
